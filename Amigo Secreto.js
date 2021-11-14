@@ -91,21 +91,21 @@ let aux = 0;
 setTimeout((a) => {
     for (var i = 0; i < sent.length; i++) {
         setTimeout(deleteMessage(i, aux), aux);
-        aux += 800 * deltaTime;
+        aux += ((800) * deltaTime);
     }
-}, 1000 * deltaTime);
+}, (1000) * deltaTime);
 
 function deleteMessage(i, aux) {
     setTimeout((select) => {
         simulateMouseEvents(document.querySelector('[title="' + sent[i] + '"]'), 'mousedown'); // Selecionar o contato
-    }, aux * deltaTime);
+    }, (aux) * deltaTime);
     setTimeout((dropdown) => {
         document.elementFromPoint(drop_down_x_pos, drop_down_y_pos).click(); // Clicar no drop-down 
-    }, aux + 200 * deltaTime);
+    }, (aux + 200) * deltaTime);
     setTimeout((dltMsg) => {
         document.elementFromPoint(delete_button_x_pos, delete_button_y_pos).click(); // Clicar em Apagar
         document.elementFromPoint(deleteForMe_x_pos, deleteForMe_y_pos).click(); // Clicar em Apagar para mim
-    }, aux + 400 * deltaTime);
+    }, (aux + 400) * deltaTime);
 }
 
 console.log("Anfitrião, seu amigo secreto é: " + send_to[0]);
