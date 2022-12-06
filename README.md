@@ -1,10 +1,10 @@
 # Amigo-Secreto
-Script para sortear amigos secretos via WhatsApp Web.
+Script para sortear amigos secretos via e-mail.
 
-## Instruções de uso
-1. Modifique as constantes das posições dos botões na tela.
-2. Preencha o vetor send_from com os nomes dos contatos. 
-3. Preencha o vetor send_to com os nomes que iriam nos papéis.
-4. Cole o código no console do navegador e posicione o mouse sobre botão do menu drop-down.
+// Para usá-lo: 
+// 1. Preencha as credenciais de e-mail.
+// 2. Preencha o vetor emails com os nomes dos contatos. 
+// 3. Preencha o vetor nomes com os nomes que iriam nos papéis.
+// 4. Execute o código abrindo a página principal (index.html).
 
-#### Obs.: para que ninguém tire o próprio nome garanta que os nomes nos vetores são iguais aos nomes dos contatos.
+#### Obs.: para que ninguém tire o próprio nome garanta que a ordem dos nomes corresponde com a ordem dos endereços de e-mail.
