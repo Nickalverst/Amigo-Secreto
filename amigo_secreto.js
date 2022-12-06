@@ -1,10 +1,10 @@
 // Script para sorteio de amigos secretos por Nicolas Barbieri Sousa.
 
 // Para usá-lo: 
-// 1. Modifique as credenciais de e-mail.
+// 1. Preencha as credenciais de e-mail (SecureToken e From).
 // 2. Preencha o vetor emails com os nomes dos contatos. 
 // 3. Preencha o vetor nomes com os nomes que iriam nos papéis.
-// 4. Execute
+// 4. Execute o código abrindo a página principal (index.html).
 
 // Obs.: para que ninguém tire o próprio nome garanta que a ordem dos nomes corresponde com a ordem dos endereços de e-mail.
 
@@ -54,9 +54,9 @@ function sendEmail(email, name) {
   let body = "Seu amigo secreto: " + name + ".";
 
   Email.send({
-    SecureToken: "ddce9da2-557b-412d-bf98-b417d022716c",
+    SecureToken: "YOURSECURETOKEN",
     To : email,
-    From : "nicolasbarbierisousa@gmail.com",
+    From : "YOUREMAIL",
     Subject : "Seu amigo secreto!",
     Body : body
     }).then(
