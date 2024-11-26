@@ -4,17 +4,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 contacts = {
-    "Nicolas": "nicolasbarbierisousa@icloud.com",
-    "Beatriz": "biagarcia.polly@gmail.com",
-    "Bruno": "bruno13judic@gmail.com",
-    "Natália": "nataliamotta2010@hotmail.com",
-    "Ana Clara": "anaclarabrisola@gmail.com",
-    "Vinicius": "vinicius.moscardo@gmail.com",
-    "Ingrid": "ingridjunquetti@gmail.com",
-    "Daniel": "danielsilvawd877@gmail.com",
-    "Augusto": "lehcampos14@gmail.com",
-    "Raphael": "raphaelcaliari@hotmail.com",
-    "Felipe": "felipe.samaha@hotmail.com"
+    "Foo": "foo@zhu.com",
+    "Bar": "bar@xyz.com",
+    "Bob": "bob@llm.com"
 }
 
 def shuffle_contacts(contacts):
@@ -28,10 +20,10 @@ def shuffle_contacts(contacts):
 
 shuffled_contacts = shuffle_contacts(contacts)
 
-sender_email = "nicolasbarbierisousa@gmail.com"
-password = "bisbilhoteiro/a você né? olhando minha senha"
+sender_email = "sender@provider.com"
+password = "pass"
 
-smtp_server = "smtp.gmail.com" 
+smtp_server = "smtp.provider.com"
 port = 587
 
 try:
@@ -40,8 +32,8 @@ try:
     server.login(sender_email, password)
 
     for name, email in shuffled_contacts.items():
-        subject = f"Seu novo amigo secreto é..."
-        body = f"Seu novo amigo secreto é {name}!\n\nAtenciosamente,\n\nCódigo do Nicolas"
+        subject = f"Seu amigo secreto é..."
+        body = f"Seu amigo secreto é {name}!\n\nAtenciosamente,\n\nCódigo do Remetente"
         
         msg = MIMEMultipart()
         msg['From'] = sender_email
